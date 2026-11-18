@@ -1,0 +1,19 @@
+[
+		{"name": "Narrator", "text": "A peaceful farm filled with crops. Dark clouds suddenly gather overhead."},
+		{"name": "Grandma", "text": "What a beautiful harvest! The crops are finally ready!"},
+		{"name": "Narrator", "text": "[THUNDER CRASHES]"},
+		{"name": "Grandma", "text": "Oh no... What was that?!"},
+		{"name": "Narrator", "text": "[Lightning strikes the farm. Flames spread across the field.]"},
+		{"name": "Grandma", "text": "My farm! The crops are on fire!"},
+		{"name": "Narrator", "text": "[The fire eventually dies down, leaving the field completely burned.]"},
+		{"name": "Grandma", "text": "Oh dear... Everything is gone. All my crops... How will I ever rebuild the farm?"},
+		{"name": "Narrator", "text": "[Player enters.]"},
+		{"name": "Player", "text": "Grandma! I saw the smoke. Are you okay?"},
+		{"name": "Grandma", "text": "I'm alright, but look at the farm. The lightning destroyed everything. I don't have any crops left."},
+		{"name": "Player", "text": "Don't worry, Grandma. I'll help you rebuild the farm!"},
+		{"name": "Grandma", "text": "But we'll need new seeds before we can grow anything again."},
+		{"name": "Player", "text": "Then I'll go find some! I'll bring back enough seeds to get the farm growing again."},
+		{"name": "Grandma", "text": "Thank you! But be careful. I heard there are creatures roaming around the farm after the storm."},
+		{"name": "Narrator", "text": "hello"}
+		
+]

@@ -1,0 +1,5 @@
+[
+		{"text": "A peaceful farm filled with crops. Dark clouds suddenly gather overhead."},
+		{"text": "[Lightning strikes the farm. Flames spread across the field.]"},
+		{"text": "[The fire eventually dies down, leaving the field completely burned.]"}
+]

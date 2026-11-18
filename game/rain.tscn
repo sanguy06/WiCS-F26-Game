@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dknpbx3bgdiit"]
+
+[ext_resource type="Script" uid="uid://boayavyc46m6t" path="res://rain.gd" id="1_ci28e"]
+[ext_resource type="AudioStream" uid="uid://ccm4bbad2bs20" path="res://Just_a_rainy_day_Relaxing_Nintendo_video_game_music_to_put_you_in_a_better_mood_wrain_ambience_clip_.wav" id="1_kwfd8"]
+
+[node name="rain" type="AudioStreamPlayer2D" unique_id=1890193398]
+stream = ExtResource("1_kwfd8")
+script = ExtResource("1_ci28e")

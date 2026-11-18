@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://uk8284wefii8"]
+
+[sub_resource type="GDScript" id="GDScript_eo2u1"]
+script/source = "extends CanvasLayer
+
+@export var color_rect: ColorRect
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	color_rect.color.a = 0.0
+	
+func fade(target_alpha: float, duration: float = 1.0):
+	var tween = create_tween()
+	tween.tween_property(color_rect, \"color:a\", target_alpha, duration)
+	return tween
+	
+"
+
+[node name="Fade" type="CanvasLayer" unique_id=1227055428 node_paths=PackedStringArray("color_rect")]
+script = SubResource("GDScript_eo2u1")
+color_rect = NodePath("ColorRect")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=159974369]
+offset_right = 1197.0
+offset_bottom = 679.0
+color = Color(0, 0, 0, 1)
