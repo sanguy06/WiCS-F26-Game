@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dvhwmxwxdfc4x"]
+
+[ext_resource type="Texture2D" uid="uid://cdb16mnwb6d43" path="res://opening/grandmasFarm copy.png" id="1_4qvrg"]
+[ext_resource type="Script" uid="uid://bm0j80h2sm4e0" path="res://opening/opening.gd" id="1_hsrnu"]
+[ext_resource type="AudioStream" uid="uid://bwmgmj0odg8gn" path="res://opening/Thunder_Sound_effect.wav" id="2_psf0h"]
+[ext_resource type="PackedScene" uid="uid://3psm6nhhyuw3" path="res://opening/tscn scenes/dialogue.tscn" id="3_ulneq"]
+[ext_resource type="AudioStream" uid="uid://ccm4bbad2bs20" path="res://opening/Just_a_rainy_day_Relaxing_Nintendo_video_game_music_to_put_you_in_a_better_mood_wrain_ambience_clip_.wav" id="4_gggm5"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=412009813 node_paths=PackedStringArray("color_rect")]
+layer = 0
+script = ExtResource("1_hsrnu")
+color_rect = NodePath("openingCanvasLayer/ColorRect")
+
+[node name="thunder" type="AudioStreamPlayer2D" parent="." unique_id=108209860]
+stream = ExtResource("2_psf0h")
+
+[node name="rain" type="AudioStreamPlayer2D" parent="." unique_id=563418775]
+stream = ExtResource("4_gggm5")
+
+[node name="GrandmasFarmCopy" type="Sprite2D" parent="." unique_id=1719409073]
+position = Vector2(577, 335.75)
+scale = Vector2(0.7907609, 0.79433054)
+texture = ExtResource("1_4qvrg")
+
+[node name="Dialogue" parent="GrandmasFarmCopy" unique_id=630610023 instance=ExtResource("3_ulneq")]
+d_file = "res://opening/json/StoryOpening.json.txt"
+
+[node name="openingCanvasLayer" type="CanvasLayer" parent="." unique_id=633911951]
+
+[node name="ColorRect" type="ColorRect" parent="openingCanvasLayer" unique_id=1948216732]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -43.0
+offset_right = 73.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="visibility_changed" from="openingCanvasLayer/ColorRect" to="." method="_on_color_rect_visibility_changed"]

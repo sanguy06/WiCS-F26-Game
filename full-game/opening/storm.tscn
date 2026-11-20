@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://56pqgfilblrv"]
+
+[ext_resource type="Texture2D" uid="uid://bfx7r4mb47f82" path="res://opening/storm.png" id="1_tgh1n"]
+[ext_resource type="Script" uid="uid://bts0ni7wd86t" path="res://opening/storm.gd" id="1_usfqg"]
+[ext_resource type="PackedScene" uid="uid://cdum3issqbfpw" path="res://opening/narrative.tscn" id="3_jybl7"]
+[ext_resource type="AudioStream" uid="uid://ccm4bbad2bs20" path="res://opening/Just_a_rainy_day_Relaxing_Nintendo_video_game_music_to_put_you_in_a_better_mood_wrain_ambience_clip_.wav" id="4_kc0wh"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=521788347 node_paths=PackedStringArray("canvas_layer", "color_rect")]
+script = ExtResource("1_usfqg")
+canvas_layer = NodePath("CanvasLayer")
+color_rect = NodePath("CanvasLayer/ColorRect")
+
+[node name="Storm" type="Sprite2D" parent="." unique_id=1909546209]
+position = Vector2(577.00006, 280)
+scale = Vector2(1.182, 1.1093333)
+texture = ExtResource("1_tgh1n")
+
+[node name="CanvasLayer" parent="Storm" unique_id=898667593 instance=ExtResource("3_jybl7")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=778657338]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=918438862]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Rain" type="AudioStreamPlayer2D" parent="." unique_id=1244090035]
+stream = ExtResource("4_kc0wh")

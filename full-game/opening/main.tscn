@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://buaq673iyr04d"]
+
+[ext_resource type="Script" uid="uid://siiehwem77oi" path="res://opening/main.gd" id="1_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bo5kbf0fh1a6h" path="res://opening/mainscreen copy.png" id="1_h2yge"]
+[ext_resource type="FontFile" uid="uid://bkyne5pindng2" path="res://opening/green_matcha/Green Matcha.otf" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cgydyr7iiqia2" path="res://opening/fade.tscn" id="3_7mycd"]
+[ext_resource type="AudioStream" uid="uid://dlugd8d6lwrge" path="res://opening/Home_Sweet_Home_-_Relaxing_Video_Game_Music_clip_0m00s-2m50s.wav" id="3_272bh"]
+[ext_resource type="FontFile" uid="uid://vuhrotsxto3c" path="res://opening/hyperlegible-sans/webfonts/HyperlegibleSans-Bold.woff2" id="3_lquwl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+bg_color = Color(0.99215686, 0.9254902, 0.69803923, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.9843137, 0.5882353, 0.34117648, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
+bg_color = Color(0.99215686, 0.9254902, 0.69803923, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
+bg_color = Color(0.99215686, 0.9254902, 0.69803923, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.99215686, 0.9254902, 0.69803923, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vw27"]
+bg_color = Color(0.99215686, 0.9254902, 0.69803923, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_272bh"]
+bg_color = Color(0.99215686, 0.9254902, 0.69803923, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="mainscreen" type="Node" unique_id=1245202912 node_paths=PackedStringArray("fade")]
+script = ExtResource("1_1bvp3")
+fade = NodePath("Main/fade")
+
+[node name="MainscreenCopy" type="Sprite2D" parent="." unique_id=1947195321]
+position = Vector2(578, 332.25)
+scale = Vector2(0.78532606, 0.8027744)
+texture = ExtResource("1_h2yge")
+
+[node name="Main" type="CanvasLayer" parent="." unique_id=933517432]
+
+[node name="IntroMusic" type="AudioStreamPlayer2D" parent="Main" unique_id=66296462]
+stream = ExtResource("3_272bh")
+
+[node name="Title" type="Label" parent="Main" unique_id=1836241319]
+offset_left = 119.0
+offset_top = 93.0
+offset_right = 1026.0
+offset_bottom = 484.0
+theme_override_colors/font_color = Color(0.99215686, 0.9254902, 0.69803923, 1)
+theme_override_colors/font_outline_color = Color(0.974338, 0.58096945, 0.3102119, 1)
+theme_override_constants/line_spacing = -50
+theme_override_constants/outline_size = 40
+theme_override_fonts/font = ExtResource("2_1bvp3")
+theme_override_font_sizes/font_size = 150
+text = "CODE THE ~ FARM ~"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Start game" type="Button" parent="Main" unique_id=1397820134]
+offset_left = 128.0
+offset_top = 456.0
+offset_right = 531.0
+offset_bottom = 586.0
+theme_override_colors/font_color = Color(0.9764706, 0.5803922, 0.30980393, 1)
+theme_override_colors/font_pressed_color = Color(0.9764706, 0.5803922, 0.30980393, 1)
+theme_override_colors/font_hover_color = Color(0.9764706, 0.5803922, 0.30980393, 1)
+theme_override_fonts/font = ExtResource("3_lquwl")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_7mycd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kek77")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lquwl")
+text = "Start Game"
+
+[node name="Exit" type="Button" parent="Main" unique_id=530925483]
+offset_left = 635.0
+offset_top = 456.0
+offset_right = 1038.0
+offset_bottom = 586.0
+theme_override_colors/font_color = Color(0.9764706, 0.5803922, 0.30980393, 1)
+theme_override_colors/font_pressed_color = Color(0.9764706, 0.5803922, 0.30980393, 1)
+theme_override_colors/font_hover_color = Color(0.9764706, 0.5803922, 0.30980393, 1)
+theme_override_fonts/font = ExtResource("3_lquwl")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_7mycd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5vw27")
+theme_override_styles/hover = SubResource("StyleBoxFlat_272bh")
+text = "Quit"
+
+[node name="fade" parent="Main" unique_id=1210428548 instance=ExtResource("3_7mycd")]
+
+[connection signal="pressed" from="Main/Start game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Main/Exit" to="." method="_on_exit_pressed"]

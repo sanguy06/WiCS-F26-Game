@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://byd2gkudrpya"]
+
+[ext_resource type="Script" uid="uid://ct2bpit2h1b5s" path="res://opening/dialogue.gd" id="1_758ep"]
+[ext_resource type="Texture2D" uid="uid://dc41rcfbd4gpt" path="res://opening/dialogue_box.png" id="2_hoxo3"]
+[ext_resource type="FontFile" uid="uid://vuhrotsxto3c" path="res://opening/hyperlegible-sans/webfonts/HyperlegibleSans-Bold.woff2" id="3_q2h7b"]
+[ext_resource type="PackedScene" uid="uid://cohnq7vwcia2g" path="res://opening/old_lady.tscn" id="4_hoxo3"]
+
+[node name="Dialogue" type="CanvasLayer" unique_id=630610023]
+script = ExtResource("1_758ep")
+d_file = "<null>"
+
+[node name="Old lady" parent="." unique_id=1351017693 instance=ExtResource("4_hoxo3")]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1073091059]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -514.5
+offset_top = -163.0
+offset_right = 514.5
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_hoxo3")
+region_rect = Rect2(4.577546, 4.3701973, 22.994743, 23.03244)
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect" unique_id=1496069540]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 12.0
+offset_right = 1019.0
+offset_bottom = 70.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_q2h7b")
+theme_override_font_sizes/normal_font_size = 35
+text = "Name"
+metadata/_edit_use_anchors_ = true
+
+[node name="Chat" type="RichTextLabel" parent="NinePatchRect" unique_id=142103730]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 52.0
+offset_right = 965.5
+offset_bottom = 141.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_q2h7b")
+theme_override_font_sizes/normal_font_size = 30
+text = "Chatting.."

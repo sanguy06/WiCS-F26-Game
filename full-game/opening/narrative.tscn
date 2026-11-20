@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cdum3issqbfpw"]
+
+[ext_resource type="Script" uid="uid://bfpebrm5hsux" path="res://opening/narrative.gd" id="1_swusm"]
+[ext_resource type="FontFile" uid="uid://c1h33hoemtmog" path="res://opening/hyperlegible-sans/otf/HyperlegibleSans-BoldItalic.otf" id="2_l246g"]
+[ext_resource type="PackedScene" uid="uid://cgydyr7iiqia2" path="res://opening/fade.tscn" id="3_d7taw"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=898667593 node_paths=PackedStringArray("fade")]
+script = ExtResource("1_swusm")
+d_file = "<null>"
+fade = NodePath("fade")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=611514208]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -559.0
+offset_top = 50.0
+offset_right = 559.0
+offset_bottom = 163.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 1, 1, 0.78039217)
+theme_override_fonts/normal_font = ExtResource("2_l246g")
+theme_override_font_sizes/normal_font_size = 28
+text = "Chatting..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fade" parent="." unique_id=1210428548 instance=ExtResource("3_d7taw")]

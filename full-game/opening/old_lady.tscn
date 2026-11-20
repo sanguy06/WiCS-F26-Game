@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cohnq7vwcia2g"]
+
+[ext_resource type="Script" uid="uid://bo433g66q4r7i" path="res://opening/old_lady.gd" id="1_j4ton"]
+[ext_resource type="Texture2D" uid="uid://d1jfvxworfxkm" path="res://opening/old-lady-knitting-5912.png" id="1_unww5"]
+
+[node name="Old lady" type="Node" unique_id=1351017693]
+script = ExtResource("1_j4ton")
+
+[node name="oldLadySprite" type="Sprite2D" parent="." unique_id=24086629]
+position = Vector2(190, 470)
+scale = Vector2(3.425781, 3.6835935)
+texture = ExtResource("1_unww5")
